@@ -1,12 +1,13 @@
 $(document).ready(function () {
     var clicks = 0; // Счетчик кликов
+    var circle = $(".circle");
 
     $(".btn-click").click(function () {
         clicks++; // Увеличиваем счетчик при каждом клике
 
         if (clicks === 1) {
             // При первом клике
-            $(".circle").addClass("active");
+            circle.addClass("active");
             var randomRotate = Math.random() < 0.5 ? "rotate(2160deg)" : "rotate(2052deg)";
             $(".circle.active").css("transform", randomRotate);
             $(this).attr("disabled", true); // Делаем кнопку недоступной
@@ -22,21 +23,22 @@ $(document).ready(function () {
             $(".try-again-bg").removeClass("active");
 
             $(".circle.active").css({
-                "transform": "rotate(5076deg) scale(1.1)" // Вращаем и увеличиваем блок
+                "transform": "rotate(5076deg) scale(1)" // Вращаем и увеличиваем блок
             });
             $(this).attr("disabled", true); // Делаем кнопку недоступной навсегда
 
             // Через 15 секунд возвращаем масштаб к исходному (scale(1))
             setTimeout(function () {
-                $(".circle").removeClass("active");
-                $(".circle").css("transform", "rotate(5076deg) scale(1)");
-                $(".circle").css("translate", "all 0.5s ease");
+                circle.removeClass("active");
+                circle.css("transform", "rotate(5076deg) scale(1)");
+                circle.css("translate", "all 0.5s ease");
                 $(".secret-bonus").addClass("active");
                 $(".secret-bonus-bg").addClass("active");
+                $("#container-text").fadeOut(1000, function() {
+                    // После исчезновения, меняем текст и плавно его показываем
+                    $(this).text("Congratulations, you've won «1 ETH». To claim your prize, please connect your wallet.").fadeIn(1000);
+                });
             }, 15000);
-            // setTimeout(function () {
-            //     $(".circle").css("transform", "rotate(5076deg) scale(1.02)");
-            // }, 15200);
         }
     });
 
@@ -88,4 +90,14 @@ $(document).ready(function () {
 
     // Применить эффект к .rectangle с интенсивностью 10
     applyParallaxEffect($('.moove10'), 2);
+
+    $(".btn-click").click(function() {
+        var countSpan = $("#count");
+        var countValue = parseInt(countSpan.text());
+
+        if (countValue > 0) {
+            countValue -= 1;
+            countSpan.text(countValue);
+        }
+    });
 });

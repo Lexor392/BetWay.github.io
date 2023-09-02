@@ -20,6 +20,9 @@
         </div>
     </header>
     <main class="main">
+        <video autoplay muted loop id="video-bg">
+            <source src="./public/images/Crypto-matrix.mp4" type="video/mp4">
+        </video>
         <div class="container">
             <img src="./public/images/compress_1eth-purpl.png" class="bg-img bg-img1 moove20">
             <img src="./public/images/compress_2btc-purpl.png" class="bg-img bg-img2 moove10">
@@ -34,8 +37,23 @@
                     <div class="secret-bonus-bg"></div>
                     <div class="try-again"></div>
                     <div class="try-again-bg"></div>
+                    <!-- <img src="./public/images/won-circle.png" class="won-circle"> -->
+                    <div class="container-count">
+                        <div class="bg-count1"></div>
+                        <div class="bg-count2"></div>
+                        <div class="content">
+                            <span class="title">YOUR SPINS</span>
+                            <span id="count">2</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="circle-bg"></div>
+                <div class="block-text-wrapper">
+                    <img src="./public/images/crypto-lines-left.png" class="img-border1">
+                    <img src="./public/images/crypto-lines-right.png" class="img-border2">
+                    <div class="block-text-bg"></div>
+                    <div class="title" id="container-text">Spin the wheel of fortune and get a chance to win cool bonuses to get you started
+                    </div>
+                </div>
             </div>
         </div>
     </main>
