@@ -1,42 +1,90 @@
-html {
+html,
+body {
     width: 100%;
     height: 100%;
+}
 
-    body {
-        width: 100%;
-        height: 100%;
-        background: url('../images/bg.png') no-repeat center / cover;
+body {
+    overflow: hidden;
+    background: url('../images/bg.png') no-repeat center / cover;
+
+    .container {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .header {
+        padding-top: 30px;
 
         .container {
-            max-width: 1320px;
-            margin: 0 auto;
-        }
+            display: flex;
+            align-items: center;
 
-        .header {
-            padding-top: 30px;
-
-            .container {
+            .logo {
+                height: 74px;
+                width: 194px;
+                background: url('../images/outglass-bg.png') no-repeat center;
                 display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            p {
+                color: #FFF;
+                font-family: JunePro;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+                margin-bottom: 4px;
+                margin-left: 14px;
+            }
+        }
+    }
+
+    .main {
+        .container {
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .block {
+                position: relative;
+                display: flex;
+                justify-content: center;
                 align-items: center;
 
-                .logo {
-                    height: 74px;
-                    width: 194px;
-                    background: url('/public/images/outglass-bg.png') no-repeat center;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                .btn-click {
+                    position: absolute;
+                    z-index: 10;
+                    width: 171.82px;
+                    height: 171.82px;
+                    border-radius: 50%;
+                    border: none;
+                    background: url('../images/btn.png') no-repeat center / cover;
+                    cursor: pointer;
+                }
+                .btn-click:hover {
+                    transform: scale(1.1);
+                }
+                .btn-click:active {
+                    transform: scale(0.9);
                 }
 
-                p {
-                    color: #FFF;
-                    font-family: JunePro;
-                    font-size: 36px;
-                    font-style: normal;
-                    font-weight: 800;
-                    line-height: normal;
-                    margin-bottom: 4px;
-                    margin-left: 14px;
+                .circle {
+                    position: absolute;
+                    z-index: 9;
+                    width: 852.96px;
+                    height: 852.96px;
+                    transform: rotate(90deg);
+                    transition: all 0.2s cubic-bezier(0.20, 0, 1, 1);
+                    background: url('../images/circle.png') no-repeat center / cover;
+                }
+
+                .circle.active {
+                    transition: all 15s cubic-bezier(0.20, 0, 0.10, 1);
+                    // transform: rotate(2160deg);
                 }
             }
         }
