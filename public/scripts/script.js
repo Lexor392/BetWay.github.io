@@ -24,6 +24,9 @@ $(document).ready(function () {
             setTimeout(function () {
                 $(".circle").removeClass("active");
                 $(".circle").css("transform", "rotate(5076deg) scale(1)");
+                $(".circle").css("translate", "all 0.5s ease");
+                $(".secret-bonus").addClass("active");
+                $(".secret-bonus-bg").addClass("active");
             }, 15000);
             // setTimeout(function () {
             //     $(".circle").css("transform", "rotate(5076deg) scale(1.02)");
