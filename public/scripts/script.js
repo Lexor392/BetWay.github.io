@@ -30,7 +30,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function() {
-    var circle = $('.circle');
+    var circle = $('.circle-bg');
 
     $(document).mousemove(function(e) {
         var mouseX = e.pageX;

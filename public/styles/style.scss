@@ -66,9 +66,11 @@ body {
                     cursor: pointer;
                     transition: all 0.2s ease;
                 }
+
                 .btn-click:hover {
                     transform: scale(1.06);
                 }
+
                 .btn-click:active {
                     transform: scale(1);
                 }
@@ -84,7 +86,12 @@ body {
                 }
 
                 .circle-bg {
-                    
+                    width: 756px;
+                    height: 756px;
+                    position: absolute;
+                    z-index: 8;
+                    border-radius: 50%;
+                    background: url('../images/circle-shadow-overlay.png') no-repeat center / cover;
                 }
 
                 .circle.active {
