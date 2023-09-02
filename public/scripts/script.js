@@ -12,9 +12,15 @@ $(document).ready(function () {
             $(this).attr("disabled", true); // Делаем кнопку недоступной
             setTimeout(function () {
                 $(".btn-click").attr("disabled", false); // Через 15 секунд убираем атрибут disabled
+                $(".try-again").addClass("active");
+                $(".try-again-bg").addClass("active");
             }, 15000);
+            
         } else if (clicks === 2) {
             // При втором клике
+            $(".try-again").removeClass("active");
+            $(".try-again-bg").removeClass("active");
+
             $(".circle.active").css({
                 "transform": "rotate(5076deg) scale(1.1)" // Вращаем и увеличиваем блок
             });
