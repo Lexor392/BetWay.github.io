@@ -27,29 +27,36 @@ $(document).ready(function () {
             }, 15000);
         }
     });
-});
 
-$(document).ready(function() {
-    var circle = $('.circle-bg');
+    function applyParallaxEffect(element, intensity) {
+        $(document).mousemove(function(e) {
+            if (element.length === 0) return; // Проверка на существование элемента
 
-    $(document).mousemove(function(e) {
-        var mouseX = e.pageX;
-        var mouseY = e.pageY;
+            var mouseX = e.pageX;
+            var mouseY = e.pageY;
 
-        var centerX = circle.offset().left + circle.width() / 2;
-        var centerY = circle.offset().top + circle.height() / 2;
+            var centerX = element.offset().left + element.width() / 2;
+            var centerY = element.offset().top + element.height() / 2;
 
-        var deltaX = mouseX - centerX;
-        var deltaY = mouseY - centerY;
+            var deltaX = mouseX - centerX;
+            var deltaY = mouseY - centerY;
 
-        var percentX = deltaX / (circle.width() / 2);
-        var percentY = deltaY / (circle.height() / 2);
+            var percentX = deltaX / (element.width() / 2);
+            var percentY = deltaY / (element.height() / 2);
 
-        var parallaxX = percentX * 20; // Измените значение, чтобы настроить эффект
-        var parallaxY = percentY * 20; // Измените значение, чтобы настроить эффект
+            var parallaxX = percentX * intensity;
+            var parallaxY = percentY * intensity;
 
-        circle.css({
-            'transform': 'translate(' + parallaxX + 'px,' + parallaxY + 'px)'
+            // Используем transform для плавного движения
+            element.css({
+                'transform': 'translate3d(' + parallaxX + 'px,' + parallaxY + 'px, 0)'
+            });
         });
-    });
+    }
+
+    // Применить эффект к .circle с интенсивностью 20
+    applyParallaxEffect($('.moove20'), 20);
+
+    // Применить эффект к .rectangle с интенсивностью 10
+    applyParallaxEffect($('.moove10'), 2);
 });
