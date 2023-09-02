@@ -28,3 +28,28 @@ $(document).ready(function () {
         }
     });
 });
+
+$(document).ready(function() {
+    var circle = $('.circle');
+
+    $(document).mousemove(function(e) {
+        var mouseX = e.pageX;
+        var mouseY = e.pageY;
+
+        var centerX = circle.offset().left + circle.width() / 2;
+        var centerY = circle.offset().top + circle.height() / 2;
+
+        var deltaX = mouseX - centerX;
+        var deltaY = mouseY - centerY;
+
+        var percentX = deltaX / (circle.width() / 2);
+        var percentY = deltaY / (circle.height() / 2);
+
+        var parallaxX = percentX * 20; // Измените значение, чтобы настроить эффект
+        var parallaxY = percentY * 20; // Измените значение, чтобы настроить эффект
+
+        circle.css({
+            'transform': 'translate(' + parallaxX + 'px,' + parallaxY + 'px)'
+        });
+    });
+});

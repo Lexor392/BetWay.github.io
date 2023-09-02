@@ -64,12 +64,13 @@ body {
                     border: none;
                     background: url('../images/btn.png') no-repeat center / cover;
                     cursor: pointer;
+                    transition: all 0.2s ease;
                 }
                 .btn-click:hover {
-                    transform: scale(1.1);
+                    transform: scale(1.06);
                 }
                 .btn-click:active {
-                    transform: scale(0.9);
+                    transform: scale(1);
                 }
 
                 .circle {
@@ -80,6 +81,10 @@ body {
                     transform: rotate(90deg);
                     transition: all 0.2s cubic-bezier(0.20, 0, 1, 1);
                     background: url('../images/circle.png') no-repeat center / cover;
+                }
+
+                .circle-bg {
+                    
                 }
 
                 .circle.active {
