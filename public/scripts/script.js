@@ -13,7 +13,6 @@ $('a[href*="#"]').click(function () {
     }, 400);
     return false;
 });
-
 $(document).ready(function () {
     
     var clicks = 0; // Счетчик кликов
@@ -56,6 +55,13 @@ $(document).ready(function () {
                     $(this).text("Congratulations, you've won «1 ETH». To claim your prize, please connect your wallet.").fadeIn(1000);
                 });
             }, 15000);
+
+            setTimeout(function () {
+                $('.img-container').addClass('active');
+                setTimeout(function () {
+                    $('.btn-success').addClass('active');
+                }, 1000);
+            }, 14000);
         }
     });
 

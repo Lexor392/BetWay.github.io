@@ -115,6 +115,56 @@ body {
                 align-items: center;
                 margin-bottom: 100px;
 
+                .img-container {
+                    position: absolute;
+                    width: 606px;
+                    height: 606px;
+                    z-index: 2;
+
+                    .won-circle {
+                        width: 606px;
+                        opacity: 0;
+                        transition: all 0.5s ease;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+                    .btn-success {
+                        width: 503.89px;
+                        height: 96.324px;
+                        border: none;
+                        background: url('../images/outglass-bg-btn.png') no-repeat center;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        span {
+                            text-shadow: 0px -3px 0px #FFE500;
+                            font-family: K2D;
+                            font-size: 42.238px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: normal;
+
+                            background: linear-gradient(180deg, rgba(96, 69, 0, 0.70) 0%, rgba(96, 69, 0, 0.70) 100%);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                }
+
+                .img-container.active {
+                    z-index: 20;
+
+                    .won-circle {
+                        opacity: 1;
+                    }
+                }
+
+
                 .block-key {
                     position: absolute;
                     z-index: 15;
