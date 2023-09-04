@@ -35,27 +35,29 @@ body {
         top: 0;
 
         .container {
-            display: flex;
-            align-items: center;
-
-            .logo {
-                height: 74px;
-                width: 194px;
-                background: url('../images/outglass-bg.png') no-repeat center;
+            .logo-container {
                 display: flex;
-                justify-content: center;
                 align-items: center;
-            }
 
-            p {
-                color: #FFF;
-                font-family: JunePro;
-                font-size: 36px;
-                font-style: normal;
-                font-weight: 800;
-                line-height: normal;
-                margin-bottom: 4px;
-                margin-left: 14px;
+                .logo {
+                    height: 74px;
+                    width: 194px;
+                    background: url('../images/outglass-bg.png') no-repeat center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                p {
+                    color: #FFF;
+                    font-family: JunePro;
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: normal;
+                    margin-bottom: 4px;
+                    margin-left: 14px;
+                }
             }
         }
     }
@@ -71,6 +73,7 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            // opacity: 0.2;
         }
 
         .container {
@@ -86,23 +89,23 @@ body {
             }
 
             .bg-img1 {
-                left: -22vw;
-                bottom: -3vh;
+                left: -580px;
+                top: 800px;
             }
 
             .bg-img2 {
-                top: 20vh;
-                left: 12vw;
+                top: 310px;
+                left: 180px;
             }
 
             .bg-img3 {
-                right: 4vw;
-                bottom: 28vh;
+                right: 100px;
+                top: 500px;
             }
 
             .bg-img4 {
-                right: -28vw;
-                bottom: -27vh;
+                right: -480px;
+                top: 920px;
             }
 
             .block {

@@ -4,19 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Betway Casino</title>
+    <title> Casino</title>
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset200802.css">
+    <link rel="stylesheet" href="public/styles/preloader.css">
     <link rel="stylesheet" href="public/styles/style.css">
+    <link rel="stylesheet" href="public/styles/media.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <img src="./public/images/betway.svg" alt="">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="./public/images/betway.svg" alt="">
+                </div>
+                <p>casino</p>
             </div>
-            <p>casino</p>
         </div>
     </header>
     <main class="main">
@@ -33,8 +43,8 @@
                     <div class="block-key"></div>
                     <button class="btn-click"></button>
                     <div class="circle"></div>
-                    <div class="secret-bonus"></div>
-                    <div class="secret-bonus-bg"></div>
+                    <!-- <div class="secret-bonus"></div>
+                    <div class="secret-bonus-bg"></div> -->
                     <div class="try-again"></div>
                     <div class="try-again-bg"></div>
                     <!-- <img src="./public/images/won-circle.png" class="won-circle"> -->
@@ -51,7 +61,8 @@
                     <img src="./public/images/crypto-lines-left.png" class="img-border1">
                     <img src="./public/images/crypto-lines-right.png" class="img-border2">
                     <div class="block-text-bg"></div>
-                    <div class="title" id="container-text">Spin the wheel of fortune and get a chance to win cool bonuses to get you started
+                    <div class="title" id="container-text">Spin the wheel of fortune and get a chance to win cool
+                        bonuses to get you started
                     </div>
                 </div>
             </div>

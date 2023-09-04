@@ -1,4 +1,21 @@
+window.onload = function () {
+    document.body.classList.add('loaded');
+}
+
+
+window.onload = function () {
+    document.body.classList.add('loaded');
+}
+var $page = $('html, body');
+$('a[href*="#"]').click(function () {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
+    return false;
+});
+
 $(document).ready(function () {
+    
     var clicks = 0; // Счетчик кликов
     var circle = $(".circle");
 
@@ -23,14 +40,14 @@ $(document).ready(function () {
             $(".try-again-bg").removeClass("active");
 
             $(".circle.active").css({
-                "transform": "rotate(5076deg) scale(1)" // Вращаем и увеличиваем блок
+                "transform": "rotate(5183.4deg) scale(1)" // Вращаем и увеличиваем блок
             });
             $(this).attr("disabled", true); // Делаем кнопку недоступной навсегда
 
             // Через 15 секунд возвращаем масштаб к исходному (scale(1))
             setTimeout(function () {
                 circle.removeClass("active");
-                circle.css("transform", "rotate(5076deg) scale(1)");
+                circle.css("transform", "rotate(5183.4deg) scale(1)");
                 circle.css("translate", "all 0.5s ease");
                 $(".secret-bonus").addClass("active");
                 $(".secret-bonus-bg").addClass("active");
