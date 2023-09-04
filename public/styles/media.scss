@@ -228,6 +228,10 @@
                 .block {
                     scale: 0.5;
                     margin-bottom: 40px;
+                    
+                    .container-count .title {
+                        margin: 0 auto;
+                    }
                 }
             }
         }
