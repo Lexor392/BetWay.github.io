@@ -120,6 +120,8 @@ body {
                     width: 606px;
                     height: 606px;
                     z-index: 2;
+                    display: flex;
+                    justify-content: center;
 
                     .won-circle {
                         width: 606px;
@@ -129,10 +131,14 @@ body {
 
                     a {
                         text-decoration: none;
+                        position: absolute;
+                        bottom: 0;
                     }
+
                     .btn-success {
                         width: 503.89px;
                         height: 96.324px;
+                        opacity: 0;
                         border: none;
                         background: url('../images/outglass-bg-btn.png') no-repeat center;
 
@@ -161,6 +167,19 @@ body {
 
                     .won-circle {
                         opacity: 1;
+                    }
+
+                    a {
+                        z-index: 21;
+                        bottom: 20px;
+                        .btn-success {
+                            opacity: 1;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                        }
+                        button:hover {
+                            scale: 1.04;
+                        }
                     }
                 }
 
