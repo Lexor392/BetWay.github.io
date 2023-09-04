@@ -172,15 +172,26 @@ body {
                     a {
                         z-index: 21;
                         bottom: 20px;
+
                         .btn-success {
                             opacity: 1;
                             cursor: pointer;
                             transition: all 0.3s ease;
                         }
+
                         button:hover {
                             scale: 1.04;
                         }
                     }
+                }
+                
+                .bg-container {
+                    position: absolute;
+                    width: 606px;
+                    height: 606px;
+                    z-index: 2;
+                    display: flex;
+                    justify-content: center;
                 }
 
 
@@ -224,12 +235,24 @@ body {
                     z-index: 9;
 
                     .circle {
+                        position: relative;
+                        z-index: 2;
                         width: 852.96px;
                         height: 852.96px;
                         transform: rotate(90deg);
                         transition: all 0.2s cubic-bezier(0.20, 0, 1, 1);
                         background: url('../images/circle.png') no-repeat center / cover;
                     }
+
+                    .circle-bg {
+                        position: absolute;
+                        z-index: 1;
+                        width: 606px;
+                        height: 606px;
+                        border-radius: 100%;
+                        background-color: rgb(32, 13, 32);
+                    }
+
                 }
 
                 .try-again,

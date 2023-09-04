@@ -71,6 +71,41 @@
     }
 }
 
+@media (max-width: 1024px) {
+    body {
+        .main {
+            .container {
+                .bg-img1 {
+                    left: -182px;
+                    top: 420px;
+                    width: 290px;
+                }
+
+                .bg-img2 {
+                    top: 110px;
+                    left: 170px;
+                    width: 130px;
+                }
+
+                .bg-img3 {
+                    right: 140px;
+                    top: 290px;
+                    width: 190px;
+                }
+
+                .bg-img4 {
+                    right: -90px;
+                    top: 490px;
+                    width: 330px;
+                }
+                .block {
+                    scale: 0.7;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 854px) {
     body {
         .header {
