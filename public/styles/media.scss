@@ -219,3 +219,63 @@
         }
     }
 }
+
+@media (max-width: 512px) {
+    body {
+        .header {
+            padding-top: 10px;
+
+            .container {
+                .logo-container {
+                    .logo {
+                        height: 28px;
+                        width: 74px;
+                        background-size: cover;
+
+                        img {
+                            width: 80%;
+                        }
+                    }
+
+                    p {
+                        font-size: 18px;
+                        margin-left: 6px;
+                    }
+                }
+            }
+        }
+
+        .main {
+            .container {
+                .bg-img1 {
+                    left: -102px;
+                    top: 234px;
+                    width: 160px;
+                }
+
+                .bg-img2 {
+                    top: 74px;
+                    left: 94px;
+                    width: 80px;
+                }
+
+                .bg-img3 {
+                    right: 74px;
+                    top: 146px;
+                    width: 110px;
+                }
+
+                .bg-img4 {
+                    right: -40px;
+                    top: 280px;
+                    width: 200px;
+                }
+
+                .block {
+                    scale: 0.36;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
