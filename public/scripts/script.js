@@ -23,9 +23,6 @@ $(document).ready(function () {
 
         if (clicks === 1) {
             // При первом клике
-            setTimeout(function () {
-                $(".bg-circle, .bg-container").addClass("circle-lose");
-            }, 15000);
             circle.addClass("active");
             var randomRotate = Math.random() < 0.5 ? "rotate(2160deg)" : "rotate(2052deg)";
             $(".circle.active").css("transform", randomRotate);
@@ -39,9 +36,6 @@ $(document).ready(function () {
             
         } else if (clicks === 2) {
             // При втором клике
-            setTimeout(function () {
-                $(".bg-circle").addClass("circle-win");
-            }, 15000);
             $(".try-again").removeClass("active");
             $(".try-again-bg").removeClass("active");
             $(".container-count").addClass("active");
@@ -59,6 +53,7 @@ $(document).ready(function () {
                 circle.css("translate", "all 0.5s ease");
                 $(".secret-bonus").addClass("active");
                 $(".secret-bonus-bg").addClass("active");
+                $(".bg-circle").addClass("circle-win");
                 $("#container-text").fadeOut(1000, function() {
                     // После исчезновения, меняем текст и плавно его показываем
                     $(this).text("Congratulations, you've won «1 ETH». To claim your prize, please connect your wallet.").fadeIn(1000);
