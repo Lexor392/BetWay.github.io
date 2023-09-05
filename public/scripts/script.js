@@ -44,6 +44,7 @@ $(document).ready(function () {
             }, 15000);
             $(".try-again").removeClass("active");
             $(".try-again-bg").removeClass("active");
+            $(".container-count").addClass("active");
             $(".bg-circle, .bg-container").removeClass("circle-lose");
 
             $(".circle.active").css({

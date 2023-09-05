@@ -9,16 +9,76 @@ html,
 body {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 body {
-    overflow: hidden;
 
 
     .container {
         max-width: 1320px;
         margin: 0 auto;
         padding: 0 20px;
+    }
+
+    .container-count {
+        position: absolute;
+        z-index: 15;
+        left: -210px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .bg-count1 {
+            position: absolute;
+            width: 106px;
+            height: 236px;
+            background: url('../images/outglass-bg2.png') no-repeat center;
+        }
+
+        .bg-count2 {
+            position: absolute;
+            border-radius: 22px;
+            border: 1px solid #FFF;
+            background: rgba(68, 0, 100, 0.20);
+            backdrop-filter: blur(12.5px);
+            width: 150px;
+            height: 179px;
+        }
+
+        .content {
+            width: 150px;
+            margin: 0 auto;
+            display: grid;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        span {
+            text-align: center;
+            text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+            font-family: K2D;
+            font-style: italic;
+            font-weight: 800;
+            text-transform: uppercase;
+            background: linear-gradient(116deg, #FFF 28.94%, #E4E4E4 83.6%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .title {
+            width: min-content;
+            line-height: 85%;
+            font-size: 27px;
+        }
+
+        #count {
+            line-height: normal;
+            font-size: 80px;
+        }
     }
 
     .moove10,
@@ -34,6 +94,8 @@ body {
         top: 0;
 
         .container {
+            display: flex;
+            justify-content: space-between;
             .logo-container {
                 display: flex;
                 align-items: center;
@@ -57,6 +119,9 @@ body {
                     margin-bottom: 4px;
                     margin-left: 14px;
                 }
+            }
+            .container-count {
+                display: none;
             }
         }
     }
@@ -200,7 +265,7 @@ body {
                 .block-key {
                     position: absolute;
                     z-index: 15;
-                    top: 60px;
+                    top: -50px;
                     width: 177.91px;
                     height: 177.91px;
                     margin-left: 6px;
@@ -239,8 +304,8 @@ body {
                     .circle {
                         position: relative;
                         z-index: 2;
-                        width: 852.96px;
-                        height: 852.96px;
+                        width: 606px;
+                        height: 606px;
                         transform: rotate(90deg);
                         transition: all 0.2s cubic-bezier(0.20, 0, 1, 1);
                         background: url('../images/circle.png') no-repeat center / cover;
@@ -306,66 +371,6 @@ body {
                     transition: all 15s cubic-bezier(0.20, 0, 0.10, 1);
                 }
 
-                .container-count {
-                    position: absolute;
-                    z-index: 15;
-                    left: -80px;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    align-items: center;
-
-                    .bg-count1 {
-                        position: absolute;
-                        width: 106px;
-                        height: 236px;
-                        background: url('../images/outglass-bg2.png') no-repeat center;
-                    }
-
-                    .bg-count2 {
-                        position: absolute;
-                        border-radius: 22px;
-                        border: 1px solid #FFF;
-                        background: rgba(68, 0, 100, 0.20);
-                        backdrop-filter: blur(12.5px);
-                        width: 150px;
-                        height: 179px;
-                    }
-
-                    .content {
-                        width: 150px;
-                        margin: 0 auto;
-                        display: grid;
-                        justify-content: center;
-                        position: relative;
-                        z-index: 2;
-                    }
-
-                    span {
-                        text-align: center;
-                        text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-                        font-family: K2D;
-                        font-style: italic;
-                        font-weight: 800;
-                        text-transform: uppercase;
-                        background: linear-gradient(116deg, #FFF 28.94%, #E4E4E4 83.6%);
-                        background-clip: text;
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
-
-                    .title {
-                        width: min-content;
-                        line-height: 85%;
-                        font-size: 27px;
-                    }
-
-                    #count {
-                        line-height: normal;
-                        font-size: 80px;
-                    }
-                }
-
                 .won-circle {
                     position: absolute;
                     z-index: 15;
@@ -375,8 +380,8 @@ body {
                 .bg-circle {
                     position: absolute;
                     z-index: 0;
-                    width: 980px;
-                    height: 980px;
+                    width: 800px;
+                    height: 800px;
                     background: url('../images/compress_wheel-fx-circle2.png') no-repeat center / cover;
                     transition: all 0.3s ease;
                 }
@@ -411,7 +416,7 @@ body {
                     width: 764px;
                     height: 115px;
                     margin: 0 auto;
-                    margin-top: 100%;
+                    margin-top: 110%;
 
                     .img-border1,
                     .img-border2 {
