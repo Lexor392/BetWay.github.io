@@ -9,7 +9,6 @@ html,
 body {
     width: 100%;
     height: 100%;
-    background: url('../images/bg.png') no-repeat center / cover;
 }
 
 body {
@@ -85,8 +84,9 @@ body {
 
             .bg-img {
                 position: absolute;
-                z-index: 1;
+                z-index: 0;
             }
+
             .bg-mobile-img {
                 display: none;
             }
@@ -150,14 +150,13 @@ body {
                         align-items: center;
 
                         span {
-                            text-shadow: 0px -3px 0px #FFE500;
+                            text-shadow: 0px -3px 0px #363636;
                             font-family: K2D;
                             font-size: 42.238px;
                             font-style: normal;
                             font-weight: 800;
                             line-height: normal;
-
-                            background: linear-gradient(180deg, rgba(96, 69, 0, 0.70) 0%, rgba(96, 69, 0, 0.70) 100%);
+                            background: linear-gradient(180deg, rgb(0 0 0) 0%, rgb(0 0 0) 100%);
                             background-clip: text;
                             -webkit-background-clip: text;
                             -webkit-text-fill-color: transparent;
@@ -187,7 +186,7 @@ body {
                         }
                     }
                 }
-                
+
                 .bg-container {
                     position: absolute;
                     width: 606px;
@@ -373,8 +372,42 @@ body {
                     flex-shrink: 0;
                 }
 
+                .bg-circle {
+                    position: absolute;
+                    z-index: 0;
+                    width: 980px;
+                    height: 980px;
+                    background: url('../images/compress_wheel-fx-circle2.png') no-repeat center / cover;
+                    transition: all 0.3s ease;
+                }
+
+                .bg-circle.circle-lose {
+                    background: url('../images/compress_wheel-fx-circle-lose.png') no-repeat center / cover;
+                }
+                .bg-circle.circle-win {
+                    background: url('../images/compress_wheel-fx-circle-win2.png') no-repeat center / cover;
+                }
+
+                .bg-container {
+                    width: 606px;
+                    height: 606px;
+                    position: absolute;
+                    z-index: 2;
+                    border-radius: 100%;
+                    box-shadow: 0 0 30px 6px #ff00e6 inset;
+                    transition: all 0.3s ease;
+                }
+
+                .bg-container.circle-lose {
+                    box-shadow: 0 0 30px 6px #ff0000 inset;
+                }
+                .bg-container.circle-win {
+                    box-shadow: 0 0 30px 6px #fffb00 inset;
+                }
+
                 .block-text-wrapper {
                     position: relative;
+                    z-index: 20;
                     width: 764px;
                     height: 115px;
                     margin: 0 auto;

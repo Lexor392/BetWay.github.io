@@ -23,6 +23,9 @@ $(document).ready(function () {
 
         if (clicks === 1) {
             // При первом клике
+            setTimeout(function () {
+                $(".bg-circle, .bg-container").addClass("circle-lose");
+            }, 15000);
             circle.addClass("active");
             var randomRotate = Math.random() < 0.5 ? "rotate(2160deg)" : "rotate(2052deg)";
             $(".circle.active").css("transform", randomRotate);
@@ -31,12 +34,17 @@ $(document).ready(function () {
                 $(".btn-click").attr("disabled", false); // Через 15 секунд убираем атрибут disabled
                 $(".try-again").addClass("active");
                 $(".try-again-bg").addClass("active");
+                $(".bg-circle, .bg-container").addClass("circle-lose");
             }, 15000);
             
         } else if (clicks === 2) {
             // При втором клике
+            setTimeout(function () {
+                $(".bg-circle").addClass("circle-win");
+            }, 15000);
             $(".try-again").removeClass("active");
             $(".try-again-bg").removeClass("active");
+            $(".bg-circle, .bg-container").removeClass("circle-lose");
 
             $(".circle.active").css({
                 "transform": "rotate(5183.4deg) scale(1)" // Вращаем и увеличиваем блок
