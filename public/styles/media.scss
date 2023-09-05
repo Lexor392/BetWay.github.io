@@ -309,6 +309,11 @@
                     }
                 }
 
+                .logo-container {
+                    scale: 1.2;
+                    margin-left: 10px;
+                }
+
                 .container-count.active {
                     opacity: 0;
                 }
@@ -351,7 +356,7 @@
 
                 .block {
                     scale: 1;
-                    margin-bottom: 40px;
+                    margin-bottom: 0;
                     width: 100%;
                     box-sizing: border-box;
 
