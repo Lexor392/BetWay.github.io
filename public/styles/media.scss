@@ -191,39 +191,6 @@
 
         .main {
             .container {
-                .bg-img {
-                    display: none;
-                }
-
-                .bg-mobile-img {
-                    display: initial;
-                    position: absolute;
-                    z-index: 0;
-                }
-
-                .bg-mobile-img1 {
-                    left: 0;
-                    bottom: 0;
-                    width: 130px;
-                }
-
-                .bg-mobile-img2 {
-                    margin-right: 45%;
-                    width: 120px;
-                    top: 190px;
-                }
-
-                .bg-mobile-img3 {
-                    margin-left: 58%;
-                    width: 140px;
-                    top: 320px;
-                }
-
-                .bg-mobile-img4 {
-                    right: 0;
-                    bottom: 0;
-                    width: 200px;
-                }
 
                 .block {
                     scale: 0.5;
@@ -324,7 +291,12 @@
             .container {
                 padding: 0;
 
+                .bg-img {
+                    display: none;
+                }
+
                 .bg-mobile-img {
+                    display: initial;
                     position: absolute;
                     z-index: 0;
                 }
