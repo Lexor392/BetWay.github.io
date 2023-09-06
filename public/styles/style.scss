@@ -75,7 +75,7 @@ body {
             font-size: 27px;
         }
 
-        #count {
+        .count {
             line-height: normal;
             font-size: 80px;
         }
@@ -368,7 +368,7 @@ body {
                 }
 
                 .circle.active {
-                    transition: all 10s cubic-bezier(0.20, 0, 0.10, 1);
+                    transition: all 4s cubic-bezier(0.20, 0, 0.10, 1);
                 }
 
                 .won-circle {
