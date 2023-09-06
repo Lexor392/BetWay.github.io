@@ -32,7 +32,7 @@ $(document).ready(function () {
                 $(".try-again").addClass("active");
                 $(".try-again-bg").addClass("active");
                 $(".bg-circle, .bg-container").addClass("circle-lose");
-            }, 15000);
+            }, 10000);
             
         } else if (clicks === 2) {
             // При втором клике
@@ -41,14 +41,14 @@ $(document).ready(function () {
             $(".bg-circle, .bg-container").removeClass("circle-lose");
 
             $(".circle.active").css({
-                "transform": "rotate(5183.4deg) scale(1)" // Вращаем и увеличиваем блок
+                "transform": "rotate(4463.4deg) scale(1)" // Вращаем и увеличиваем блок
             });
             $(this).attr("disabled", true); // Делаем кнопку недоступной навсегда
 
             // Через 15 секунд возвращаем масштаб к исходному (scale(1))
             setTimeout(function () {
                 circle.removeClass("active");
-                circle.css("transform", "rotate(5183.4deg) scale(1)");
+                circle.css("transform", "rotate(4463.4deg) scale(1)");
                 circle.css("translate", "all 0.5s ease");
                 $(".secret-bonus").addClass("active");
                 $(".secret-bonus-bg").addClass("active");
@@ -57,14 +57,14 @@ $(document).ready(function () {
                     // После исчезновения, меняем текст и плавно его показываем
                     $(this).text("Congratulations, you've won «1 ETH». To claim your prize, please connect your wallet.").fadeIn(1000);
                 });
-            }, 15000);
+            }, 10000);
 
             setTimeout(function () {
                 $('.img-container').addClass('active');
                 setTimeout(function () {
                     $('.btn-success').addClass('active');
                 }, 1000);
-            }, 14000);
+            }, 10000);
         }
     });
 
